@@ -1,0 +1,79 @@
+{
+  "name": "react-skeleton",
+  "version": "1.0.0",
+  "description": "Skeleton project for React",
+  "main": "src/index.js",
+  "scripts": {
+    "dist": "npm run test && webpack -p --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js --progress",
+    "test": "jest && eslint --ext .js,.jsx src/* __tests__/*",
+    "watch": "jest --watchAll",
+    "lint": "eslint --fix --ext .js,.jsx src/* __tests__/*",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": "https://github.com/ddubson/react-webpack-babel",
+  "author": "Dmitriy Dubson",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "immutability-helper": "^2.6.6",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.23.0",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-react-16-adapter-setup": "^0.1.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "html-webpack-plugin": "^2.28.0",
+    "inline-source-map": "^0.6.2",
+    "jest": "^22.1.4",
+    "node-sass": "^4.7.2",
+    "react-test-renderer": "16.0.0",
+    "redux-devtools": "^3.4.1",
+    "sass-loader": "^6.0.6",
+    "source-map": "^0.7.0",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1",
+    "@storybook/react": "^3.4.1",
+    "@storybook/addon-actions": "^3.4.1",
+    "@storybook/addon-links": "^3.4.1",
+    "@storybook/addons": "^3.4.1",
+    "babel-runtime": "^6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "jest": {
+    "bail": true,
+    "setupFiles": [
+      "enzyme-react-16-adapter-setup"
+    ]
+  }
+}
